@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register Page</title>
+    <style>
+         .container{
+            width: 700px;
+            height: 600px;
+            box-shadow: 8px 6px 8px 2px rgb(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 100px auto 100px auto;
+            text-align: center;
+            justify-content: space-around;
+           
+        }
+        .passet{
+            background-color: white;
+            border: none;
+            display: block;
+           
+        }
+        .passet2{
+            background-color: white;
+            border: none;
+            display: none;
+        }
+        /* .container input{
+            display: block;
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group my-5">
+        </br>
+            <h2>Registration portal</h2>
+        <input type="text" placeholder="Enter UserName" class="form-control my-5" id="username">
+        <input type="email" placeholder="Enter Email" class="form-control my-5" id="email">
+        
+        <input type="password" placeholder="Input Password" class="form-control my-5" id="password" >
+        <div>
+        <input type="password" placeholder="Comfirm Password" class="form-control" id="comfirmPass">
+       <button class="passet" onclick="show()" id="showpass"> <i class="fa fa-eye">Show</i></button><button class="passet2" id="hidepass" onclick="hide()"> <i class="fa fa-eye-slash">hide</i></button>
+    </div>
+    
+        <button class="btn btn-success my-5" onclick="reg()">Register</button>
+    </div>
+    </form>
+    </div>
+    <div>
+        <div  class="w-50 form-group mx-auto my-5 shadow border p-4 rounded">
+            <div class="form-group">
+                <h1>Please Sign in to Continue</h1>
+                <input type="text" placeholder="E-mail Address" type="email" class="form-control my-5" id="signMail" >
+                <input type="text" placeholder="Password" type="password" class="form-control my-5" id="signPass">
+                <button class="btn btn-success" onclick="signIN()"> Sign In</button>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const regArray =[]
+    let userExist= false;
+    let userName = document.getElementById("username");
+    let email = document.getElementById("email");
+    let passWord = document.getElementById("password");
+    let comfirmPass = document.getElementById("comfirmPass");
+   
+   
+
+    function reg(){
+        if (userName.value == "" || email.value=="" || passWord.value =="" || comfirmPass.value==""){
+            alert("Input Field cannot be empty")
+        }
+        else if (passWord.value != comfirmPass.value){
+            alert("Password and Confirm Password Must be the Same")
+        }
+        else{
+            alert("Registration Successful")
+           
+            let userdetials = {
+        userFullName: userName.value,
+        userEmail: email.value,
+        userPassword: passWord.value
+    }
+    regArray.push(userdetials)
+    console.log(userdetials)
+
+            // userName.value="";
+            // email.value="";
+            // passWord.value="";
+            // comfirmPass.value=""
+            
+        }
+    }
+   
+
+    function show(){
+        passWord.type="text"
+        comfirmPass.type="text"
+        hidepass.style.display="block"
+        showpass.style.display="none"
+    }
+
+    function hide(){
+        passWord.type="password"
+        comfirmPass.type="password"
+        hidepass.style.display="none"
+        showpass.style.display="block"
+    }
+
+    function signIN(){
+        let signMail = document.getElementById("signMail");
+        let signPass = document.getElementById("signPass");
+    
+        for(i=0; i<=regArray.length; i++){
+            if( signPass.value === regArray[i].userPassword && signMail.value === regArray[i].userFullName ){
+                userExist=true;
+                break;
+            }
+        }
+        if(userExist){
+            alert("welcome to your portal")
+        }
+        else{
+            alert("Invalid Credentials")
+        }
+    }
+</script>
+</html>

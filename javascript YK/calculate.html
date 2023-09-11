@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator Standard</title>
+</head>
+
+<style>
+    .calculate{
+        height: 700px;
+        width: 400px;
+        border: 5px solid black;
+        box-shadow: inset 2px 2px  2px 2px yellow;
+        border-radius: 10px;
+        margin: 50px auto;
+    }
+
+    .output{
+        width: 377px;
+        margin: 10px;
+        height: 200px;
+        border: none;
+        font-size: 50px;
+
+    }
+
+    .output2{
+        width: 377px;
+        margin: 10px;
+        height: 200px;
+        border: none;
+        font-size: 50px;
+        /* background-color: red; */
+
+    }
+
+
+    .output1{
+        width: 377px;
+        margin: 10px;
+        height: 200px;
+        border: none;
+        font-size: 50px;
+        /* background-color: blue; */
+
+    }
+
+
+.buttons{
+    /* background-color: yellow; */
+    height: calc(100%-200px);
+    margin: auto;
+    width: fit-content;
+}
+.number-1{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-2x{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+.number-3x{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-4x{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-5x{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-6x{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+
+.number-3{
+    width: 150px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 30px;
+   margin: 5px 10px;
+   border: none;
+
+}
+</style>
+<body>
+    <div class="calculate">
+
+
+
+
+        <input class="output" type="textarea" name="" id="output-center">
+        <input class="output1" hidden type="textarea" name="" id="output-center2">
+        <input class="output2" hidden type="textarea" name="" id="output-center3">
+
+        
+
+
+        <div id="buttons" class="buttons">
+            <button onclick="Reset()" class="number-1">A/C</button>
+            <button onclick=""class="number-1">+/-</button>
+            <button onclick="Percentage()"class="number-1">%</button>
+            <button onclick="Division()"class="number-1">/</button>
+            <button onclick="document.getElementById('output-center').value+='7'"class="number-1">7</button>
+            <button onclick="document.getElementById('output-center').value+='8'"class="number-1">8</button>
+            <button onclick="document.getElementById('output-center').value+='9'"class="number-1">9</button>
+            <button onclick="Multiplication()"class="number-1">X</button>
+            <button onclick="document.getElementById('output-center').value+='4'"class="number-1">4</button>
+            <button onclick="document.getElementById('output-center').value+='5'"class="number-1">5</button>
+            <button onclick="document.getElementById('output-center').value+='6'"class="number-1">6</button>
+            <button onclick="Minus()"class="number-1">-</button>
+            <button onclick="document.getElementById('output-center').value+='1'"class="number-1">1</button>
+            <button onclick="document.getElementById('output-center').value+='2'"class="number-1">2</button>
+            <button onclick="document.getElementById('output-center').value+='3'"class="number-1">3</button>
+            <button onclick="Plus()"class="number-1">+</button>
+            <button onclick="document.getElementById('output-center').value+='0'"class="number-3">0</button>
+            <button onclick="document.getElementById('output-center').value+=','"class="number-1">,</button>
+            <button onclick="Equality()"class="number-1">=</button>
+
+
+
+            
+        </div>
+
+
+
+
+        <div hidden id="button-2" class="buttons">
+            <button onclick="Reset()" class="number-1">A/C</button>
+            <button onclick=""class="number-1">+/-</button>
+            <button onclick="Percentage()"class="number-1">%</button>
+            <button onclick="Division()"class="number-1">/</button>
+            <button onclick="document.getElementById('output-center2').value+='7'"class="number-1">7</button>
+            <button onclick="document.getElementById('output-center2').value+='8'"class="number-1">8</button>
+            <button onclick="document.getElementById('output-center2').value+='9'"class="number-1">9</button>
+            <button onclick="Multiplication()"class="number-1">X</button>
+            <button onclick="document.getElementById('output-center2').value+='4'"class="number-1">4</button>
+            <button onclick="document.getElementById('output-center2').value+='5'"class="number-1">5</button>
+            <button onclick="document.getElementById('output-center2').value+='6'"class="number-1">6</button>
+            <button onclick="Minus()"class="number-1">-</button>
+            <button onclick="document.getElementById('output-center2').value+='1'"class="number-1">1</button>
+            <button onclick="document.getElementById('output-center2').value+='2'"class="number-1">2</button>
+            <button onclick="document.getElementById('output-center2').value+='3'"class="number-1">3</button>
+            <button onclick="Plus()"class="number-1">+</button>
+            <button onclick="document.getElementById('output-center2').value+='0'"class="number-3">0</button>
+            <button onclick="document.getElementById('output-center2').value+=','"class="number-1">,</button>
+            <button id="equality" onclick="equality()"class="number-1">=</button>
+            <button id="equalitytwox" onclick="equalityTwox()"class="number-2x">=</button>
+            <button id="equalitythreex" onclick="equalityThreex()"class="number-3x">=</button>
+            <button id="equalityfourx" onclick="equalityFourx()"class="number-4x">=</button>
+            <button id="equalityfivex" onclick="equalityFivex()"class="number-5x">=</button>
+            <!-- <button onclick="equality6()"class="number-6x">=</button> -->
+
+
+
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+
+// let c=(Number(a) + Number(b));
+    
+//     let d=(Number(a) * Number(b));
+//     let e=document.getElementById('output-center3').value=(Number(a)- Number(b));
+//     let f=document.getElementById('output-center3').value=(Number(a) % Number(b));
+//     let g=document.getElementById('output-center3').value=(Number(a) / Number(b));
+
+    // let x=document.getElementById('output-center3');
+
+function Plus(){
+    let a=document.getElementById('output-center').value;
+    document.getElementById('output-center2').hidden=false;
+    document.getElementById('output-center3').hidden=true;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+
+    document.getElementById('buttons').hidden=true;
+
+
+    document.getElementById('equality').hidden=false;
+    document.getElementById('equalitytwox').hidden=true;
+    document.getElementById('equalitythreex').hidden=true;
+    document.getElementById('equalityfourx').hidden=true;
+    document.getElementById('equalityfivex').hidden=true;
+
+
+
+
+
+
+}
+function equality(){
+    let a=document.getElementById('output-center').value;
+    let b=document.getElementById('output-center2').value;
+
+    
+    document.getElementById('output-center2').hidden=true;
+    document.getElementById('output-center3').hidden=false;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+    
+
+    c=(Number (a)+Number(b));
+    c=document.getElementById('output-center3').value=(Number (a)+Number(b));
+    
+
+ 
+   
+  
+   
+
+
+
+
+
+
+
+
+
+}
+
+
+   
+
+
+
+   
+
+
+   
+    
+   
+
+    
+
+
+function Multiplication(){
+    let a=document.getElementById('output-center').value;
+    document.getElementById('output-center2').hidden=false;
+    document.getElementById('output-center3').hidden=true;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+
+    document.getElementById('buttons').hidden=true;
+
+    document.getElementById('equality').hidden=true;
+    document.getElementById('equalitytwox').hidden=false;
+    document.getElementById('equalitythreex').hidden=true;
+    document.getElementById('equalityfourx').hidden=true;
+    document.getElementById('equalityfivex').hidden=true;
+  
+       
+
+}
+
+
+function equalityTwox(){
+
+    let a=document.getElementById('output-center').value;
+    let b=document.getElementById('output-center2').value;
+
+    
+    document.getElementById('output-center2').hidden=true;
+    document.getElementById('output-center3').hidden=false;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+    
+
+    c=(Number (a)*Number(b));
+    c=document.getElementById('output-center3').value=(Number (a)*Number(b));
+
+}
+
+
+
+function Minus(){
+    let a=document.getElementById('output-center').value;
+    document.getElementById('output-center2').hidden=false;
+    document.getElementById('output-center3').hidden=true;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+
+    document.getElementById('buttons').hidden=true;
+
+
+
+    document.getElementById('equality').hidden=true;
+    document.getElementById('equalitytwox').hidden=true;
+    document.getElementById('equalitythreex').hidden=false;
+    document.getElementById('equalityfourx').hidden=true;
+    document.getElementById('equalityfivex').hidden=true;
+    
+
+
+
+}
+
+function equalityThreex(){
+
+let a=document.getElementById('output-center').value;
+let b=document.getElementById('output-center2').value;
+
+
+document.getElementById('output-center2').hidden=true;
+document.getElementById('output-center3').hidden=false;
+document.getElementById('output-center').hidden=true;
+
+document.getElementById('button-2').hidden=false;
+
+
+c=(Number (a)-Number(b));
+c=document.getElementById('output-center3').value=(Number (a)-Number(b));
+
+}
+
+
+
+
+
+
+function Percentage(){
+    let a=document.getElementById('output-center').value;
+    document.getElementById('output-center2').hidden=false;
+    document.getElementById('output-center3').hidden=true;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+
+    document.getElementById('buttons').hidden=true;
+   
+
+
+    document.getElementById('equality').hidden=true;
+    document.getElementById('equalitytwox').hidden=true;
+    document.getElementById('equalitythreex').hidden=true;
+    document.getElementById('equalityfourx').hidden=false;
+    document.getElementById('equalityfivex').hidden=true;
+
+}
+
+
+
+
+function equalityFourx(){
+
+let a=document.getElementById('output-center').value;
+let b=document.getElementById('output-center2').value;
+
+
+document.getElementById('output-center2').hidden=true;
+document.getElementById('output-center3').hidden=false;
+document.getElementById('output-center').hidden=true;
+
+document.getElementById('button-2').hidden=false;
+
+
+c=(Number (a)%Number(b));
+c=document.getElementById('output-center3').value=(Number (a)%Number(b));
+
+}
+
+
+function Division(){
+    let a=document.getElementById('output-center').value;
+    document.getElementById('output-center2').hidden=false;
+    document.getElementById('output-center3').hidden=true;
+    document.getElementById('output-center').hidden=true;
+
+    document.getElementById('button-2').hidden=false;
+
+    document.getElementById('buttons').hidden=true;
+
+
+    document.getElementById('equality').hidden=true;
+    document.getElementById('equalitytwox').hidden=true;
+    document.getElementById('equalitythreex').hidden=true;
+    document.getElementById('equalityfourx').hidden=true;
+    document.getElementById('equalityfivex').hidden=false;
+
+
+}
+
+
+function equalityFivex(){
+
+let a=document.getElementById('output-center').value;
+let b=document.getElementById('output-center2').value;
+
+
+document.getElementById('output-center2').hidden=true;
+document.getElementById('output-center3').hidden=false;
+document.getElementById('output-center').hidden=true;
+
+document.getElementById('button-2').hidden=false;
+
+
+c=(Number (a)/Number(b));
+c=document.getElementById('output-center3').value=(Number (a)/Number(b));
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function Reset(){
+    let a=document.getElementById('output-center').value="";
+    let b=document.getElementById('output-center2').value="";
+    let c=document.getElementById('output-center3').value="";
+    
+    
+    document.getElementById('output-center2').hidden=true;
+    document.getElementById('output-center3').hidden=true;
+    document.getElementById('output-center').hidden=false;
+
+    document.getElementById('button-2').hidden=true;
+
+    document.getElementById('buttons').hidden=false;
+    
+
+}
+
+
+
+
+</script>

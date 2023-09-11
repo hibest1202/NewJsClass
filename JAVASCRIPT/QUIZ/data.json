@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "question":"Which player is affectionately known as 'The King' to Manchester United fans?",
+        "option1":"Ryan Giggs",
+        "option2":"Paul Scholes",
+        "option3":"Eric Cantona",
+        "correcAnswer":"Eric Cantona"
+    },
+
+    {
+        "id": 2,
+        "question":"Manchester United broke their record transfer fee in 2016 when they paid £89.5 million for which player?",
+        "option1":"Paul Pogba",
+        "option2":"Angel DiMaria",
+        "option3":"Alexis Sanchez",
+        "correcAnswer":"Paul Pogba"
+    },
+
+    {
+        "id": 3,
+        "question":"What is the nickname of Old Trafford?",
+        "option1":"The Theatre of Dreams",
+        "option2":"The Red Devils",
+        "option3":"Stretfod Stand",
+        "correcAnswer":"The Theatre of Dreams"
+    }
+,
+    {
+        "id": 4,
+        "question":"Who is the only player to win the European Golden Boot while playing for Manchester United?",
+        "option1":"Wayne Rooney",
+        "option2":"Cristiano Ronaldo",
+        "option3":"van nistelrooy",
+        "correcAnswer":"Cristiano Ronaldo"
+    }
+,
+    {
+        "id": 5,
+        "question":"Alex Ferguson famously kicked a boot at which player, injuring his eye?",
+        "option1":"Carlos Tevez",
+        "option2":"David Beckham",
+        "option3":"Rio Ferdinand",
+        "correcAnswer":"David Beckham"
+    }
+]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body class="p-5">
+    <div class="d-flex gap-4">
+      <input id="nameinput" type="text" class="form-control" placeholder="NAME...."/>
+      <button onclick="addData()" class="btn btn-primary"> Add </button>
+    </div>
+    <br>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>UID</th>
+          <th>NAME</th>
+          <th>SCORE</th>
+          <th>AGE</th>
+          <th>DATE</th>
+        </tr>
+      </thead>
+      <tbody id="content"></tbody>
+    </table>
+
+    <script>
+      const users = [
+        {name: "Samuel Henshaw",  score: 50, UID: "CI6748", age: 30,   date: "12-04-2022"},
+        {name: "Joy Henshaw", score: 90,  UID: "CI6732",  age: 60, date: "12-07-2022"},
+        {name: "Esther Henshaw", score: 90, UID: "CI6732",  age: 60, date: "12-04-2022"},
+      ];
+      //   loops through the array of objects to access each object
+
+      ShowData()
+
+      function addData(){
+        const name = document.getElementById("nameinput");
+        const date = new Date();
+        let data = {
+            name: name.value,
+            score: Math.floor(Math.random() * 100),
+            age: Math.floor(Math.random() * 100),
+            UID: "CI" + Math.floor(Math.random() * 9999),
+            date: date.toDateString()
+        }
+        users.push(data);
+        clearTbody()    // clears all data on the screen
+        ShowData()
+      }
+
+      function clearTbody(){
+        document.getElementById("content").innerHTML = ""
+      }
+
+      function ShowData(){
+        for (let index = 0; index < users.length; index++) {
+        let item = users[index]; //   stores each object in variable item
+
+        // adds each data into the tbody of the table
+        document.getElementById("content").innerHTML += `
+          <tr>
+              <td>${index}</td>
+              <td>${item.UID}</td>
+              <td>${item.name}</td>
+              <td>${item.score}</td>
+              <td>${item.age}</td>
+              <td>${item.date}</td>
+          </tr>`
+      }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.phone{
+    width: 400px;
+    height: 700px;
+    border: 2px solid grey;
+    border-radius: 15px;
+    margin: auto;
+    position: relative;
+    overflow: scroll;
+}
+.sticky{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: aqua;
+    border-radius:  0 0 15px 15px;
+}
+.sticky-icons{
+    font-size: 40px;
+}
+.contents{
+    display: none;
+
+}
+.phone:focus-within .contents{
+    display: block;
+}

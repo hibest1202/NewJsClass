@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+      <button onclick="load()" class="btn btn-warning"> load Flod Data</button>
+
+      <button onclick="load2()" class="btn btn-warning"> load Atik Data</button>
+      <button onclick="load2()" class="btn btn-success"> show Flod Data</button>
+      <button onclick="shownumber()" class="btn btn-success"> show Atik Data</button>
+
+      <div class="data-container">
+        <table class="table table-striped">
+            <tr>
+                <th>S/N</th>
+                <th>NAME</th>
+                <th>NUMBER</th>
+                <th>STATE</th>
+            </tr>
+            <tbody id="content">
+
+            </tbody>
+      </div>
+
+</body>
+</html>
+<script>
+    numArray = []
+    atikArray=[]
+    
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAHu1NTnNgfMjc4ddBYGiWWbEEoTVMTWuM",
+  authDomain: "fire-numbers.firebaseapp.com",
+  projectId: "fire-numbers",
+  storageBucket: "fire-numbers.appspot.com",
+  messagingSenderId: "850048196384",
+  appId: "1:850048196384:web:9f537c0ba0cd71061a8145"
+};
+// Initialize Firebase
+
+const app = firebase.initializeApp(firebaseConfig);   
+const mydata = firebase.firestore();
+
+
+async function load(){
+   await mydata.collection("datas").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        let dataTray = doc.data();
+        numArray.push(dataTray);
+    });
+});
+savings()
+
+shownumber()
+
+       
+
+ console.log(numArray)
+}
+
+
+
+async function load2(){
+   await mydata.collection("Atik").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        let dataTray = doc.data();
+        atikArray.push(dataTray)
+        
+    });
+});
+
+ console.log(atikArray)
+}
+
+
+
+function shownumber(){
+  
+    let  numArrayReturn = JSON.parse(localStorage.getItem('newNumber'))
+    for (let index = 0; index < numArrayReturn.length; index++) {
+            const element = numArrayReturn[index];
+            document.getElementById('content').innerHTML+=`
+        <tr>
+           
+             
+            <td>${element.phoneNumber},</td>
+            
+            </tr>`
+            
+        }
+}
+
+function emptyall(){
+    document.getElementById('content').innerHTML+=""
+    localStorage.removeItem('newNumber')
+}
+function savings(){
+    emptyall()
+    localStorage.setItem('newNumber', JSON.stringify(numArray))
+}
+
+
+
+
+</script>
+

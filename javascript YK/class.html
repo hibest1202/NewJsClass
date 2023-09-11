@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        .red-light{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border-radius: 100%;
+            margin: 10px auto;
+            border: 1px solid black;
+            
+        }
+
+        .amber-light{
+            height: 100px;
+            width: 100px;
+            /* background-color: goldenrod; */
+            border-radius: 100%;
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+
+        .green-light{
+            height: 100px;
+            width: 100px;
+            /* background-color: green; */
+            border-radius: 100%;
+            margin: 10px auto;
+            border: 1px solid black;
+
+        }
+        .change-light{
+            margin: 10px auto;
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            border-radius: 100%;
+            margin: 20px auto;
+            border: none;
+           
+
+        }
+
+        .traffic{
+            height: 350px;
+            width: 120px;
+            margin: 10px auto;
+            border: 1px solid black;
+            border-radius: 10px;
+          
+        }
+
+       
+    </style>
+</head>
+<body>
+<div class="traffic">
+    <div id="light" class="red-light"></div>
+    <div id="light1" class="amber-light"></div>
+    <div id="light2" class="green-light"></div>
+    <button onclick="changeHere()"  id="change-my-light" class="change-light"> Change Light</button>
+
+
+</div>
+    
+</body>
+</html>
+<script>
+const A= document.getElementById('light')
+    const B= document.getElementById('light1');
+    const C= document.getElementById('light2');
+    let x = "red";
+    
+    function changeHere() {
+    //    light.style.backgroundColor="red";
+    //    light1.style.backgroundColor="gold";
+    //    light2.style.backgroundColor="green";
+
+    
+    if(x=='red'){
+        A.style.backgroundColor='white';
+        B.style.backgroundColor='yellow';
+        C.style.backgroundColor='white';
+        x="yellow";
+
+    } else if(x=='yellow'){
+        A.style.backgroundColor='white';
+        B.style.backgroundColor='white';
+        C.style.backgroundColor='green';
+        x="green";
+
+    } else if(x=='green'){
+        A.style.backgroundColor='red';
+        B.style.backgroundColor='white';
+        C.style.backgroundColor='white';
+        x="red";
+
+    }
+    
+
+
+    }
+
+
+
+
+
+
+  
+
+    
+    
+
+ 
+    
+     
+
+
+   
+    
+
+    
+
+
+
+
+
+</script>

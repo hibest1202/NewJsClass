@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .container{
+            width: 700px;
+            height: 600px;
+            box-shadow: 8px 6px 8px 2px rgb(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 100px auto 100px auto;
+            text-align: center;
+        }
+
+        .btn-holder{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn{
+           
+            width: 100px;
+            height: 50px;
+            background-color: green;
+            text-align: center;
+            border-radius: 8px;
+            color: white;
+            border: none;
+        }
+        .btn:hover{
+            background-color: yellow;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" id="container"></div>
+    <div class="btn-holder"><button class="btn" onclick="previous()">Previous</button> <button class="btn" onclick="next()">Next</button></div>
+</body>
+<script>
+     let num = 0;
+    let arr1 =[ "land1.jpeg", "red.png", "yellow.png", "blue.png", "liverpool.png", "tshirt.jpeg"];
+    
+    let sn= document.getElementById("container")
+    sn.innerHTML=`<img src="${arr1[num]}"  width= "fit-content"; height="600px">`;
+
+    function next(){
+        if (num < (arr1.length-1)){
+            num++;
+            sn.innerHTML=`<img src="${arr1[num]}"  width= "700px"; height="600px">`;
+        
+        console.log(num)
+    } 
+    else{
+        num = 0
+        sn.innerHTML=`<img src="${arr1[num]}"  width= "700px"; height="600px">`;
+    }
+    }
+
+    function previous(){
+        if (num > 0){
+            num--;
+            sn.innerHTML=`<img src="${arr1[num]}"  width= "700px"; height="600px">`;
+            
+            console.log(num)  
+        
+        
+    } 
+    else{
+        num = arr1.length - 1;
+        sn.innerHTML=`<img src="${arr1[num]}"  width= "700px"; height="600px">`;
+    }
+    }
+</script>
+</html>

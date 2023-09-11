@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select me</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="input-me">
+    <!-- <button onclick="showNames()">Show</button> -->
+    <button onclick="addNames()">Add</button>
+    <select name="" id="selectMe" onclick="Hello()">
+        <option id="me" value="please pick a country">pick</option>
+    </select>
+    <h1 id="showboss"> </h1>
+</body>
+</html>
+<script>
+
+
+let inputside=document.getElementById('input-me');
+let showboss=document.getElementById('showboss');
+ let   showbright=document.getElementById('selectMe');
+
+
+function addNames(){
+   let create=document.createElement('option')
+   create.value=inputside.value;
+   create.text=inputside.value;
+   showbright.add(create)
+   
+   
+//    create.innerHTML=`<div>${inputside.value}</div>`
+//   let dcreated =showbright.appendChild(create);
+
+  let gg=document.getElementById('me');
+
+
+
+
+
+
+    // eric=document.getElementById('showboss').innerHTML='User selected'+ dcreated.value;
+//     base=document.createElement('option').onchange='This User selected'+ dcreated.value;
+//   console.log(base)
+    
+
+}
+function Hello() {
+    showboss.innerText = showbright.value;
+    
+}
+
+
+
+</script>

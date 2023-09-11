@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#show-me{
+    color: green;
+}
+
+#shown-me{
+    color: blue;
+}
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="input-side">
+    <button onclick="Adds()">Add</button>
+    <button onclick="Removal()">Remove</button>
+    <button onclick="Rep()">Replace</button>
+    <h3 id="show-me"></h3>
+    
+    <h3 id="shown-me"></h3>
+    
+</body>
+</html>
+
+<script>
+
+    
+let shown=document.getElementById('shown-me')
+ shown=['Shade', 'Adeakin','Bayonle']
+
+
+
+let show=document.getElementById('show-me');
+ show=['Bayo', 'Sade', 'Akin']
+
+    function Adds(){
+        Ishow=document.getElementById('input-side').value;
+
+        Mrshow=document.getElementById('show-me').innerText=show;
+        Mrshown=document.getElementById('shown-me').innerText=shown;
+
+
+       let Mycount='baba';
+       Mycounter=Mycount.length;
+        if(Ishow.length==Mycounter){
+            show.push(Ishow);
+            Mrshow=document.getElementById('show-me').innerText=show;
+            
+
+        }
+       else if(Ishow.lenght!= Mycounter){
+            shown.push(Ishow);
+            Mrshown=document.getElementById('shown-me').innerText=shown;
+
+        }
+
+    }
+
+    function Removal(){
+        Ishow=document.getElementById('input-side').value;
+        Mrshow=document.getElementById('show-me').innerText=show;
+        Mrshown=document.getElementById('shown-me').innerText=shown;
+
+        show.pop(Ishow)
+        Mrshow=document.getElementById('show-me').innerText=show;
+
+
+        let Mycount='baba';
+       Mycounter=Mycount.length;
+        if(shown.lenght != Mycounter){
+        shown.pop(Ishow)
+        Mrshown=document.getElementById('shown-me').innerText=shown;
+
+       }
+
+    
+      
+
+        
+    }
+
+
+    function Rep(){
+        
+    }
+</script>

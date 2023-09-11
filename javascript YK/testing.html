@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    
+</head>
+<body>
+
+
+
+
+    <h1 id="heading">hu</h1>
+    
+
+    <button onclick="document.getElementById('heading').innerHTML='samuel'">Red</button>
+    <!-- <button onclick="document.getElementById('heading').style.color='red'">blue</button> -->
+    <button onclick="document.getElementById('heading').innerHTML='sqi'">Blue</button>
+    <!-- <div document.getElementById(heading).style.color="green";></div> -->
+
+
+
+
+
+    <input  type="text" name="" id="input-man">
+
+    <button onclick="document.getElementById('input-man').type='text'">Show</button>
+    <button onclick="document.getElementById('input-man').type='password'">hide</button>
+
+    </div>
+
+
+
+
+    <img style=" width: 100px;" id="me" src="../barca.png" alt="">
+    <!-- <img style=" width: 100px;" id="me" src="../bayern.png" alt="">
+    <img  style=" width: 100px;" id="me" src="../city.png" alt="">
+    <img style=" width: 100px;"  id="me" src="../arsenal.png" alt="">
+    <img style=" width: 100px;" id="me" src="../liverpool.png" alt=""> -->
+
+
+
+
+    <button onclick="document.getElementById('me').src='../barca.png'">BARCELONA</button>
+    <button onclick="document.getElementById('me').src='../bayern.png'">BAYEN MUNICH</button>
+    <button onclick="document.getElementById('me').src='../city.png'">Manchester city</button>
+    <button onclick="document.getElementById('me').src='../arsenal.png'">Arsenal</button>
+    <button onclick="document.getElementById('me').src='../liverpool.png'">Liverpool</button>
+
+
+
+   <div class="form-control flex">
+    <input type="password" name="" id="input" class="form-control border-0">
+ 
+    
+<button id="eye" class="btn" onclick="showPassword()">Show</button>
+<button id="eyeslash" hidden class="btn" onclick="hidePassword()">hide</button>
+</div>
+    
+
+
+
+
+
+<!-- calculator -->
+
+
+
+
+<div class="numbers d-flex form-control">
+
+
+
+    <input type="text" name="" id="input1" >
+
+    <button onclick="document.getElementById('input1').value+='1'">1</button>
+    <button onclick="document.getElementById('input1').value+='2'">2</button>
+    <button onclick="document.getElementById('input1').value+='3'">3</button>
+    <button onclick="document.getElementById('input1').value+='4'">4</button>
+    <button onclick="document.getElementById('input1').value+='5'">5</button>
+    <button onclick="document.getElementById('input1').value+='6'">6</button>
+    <button onclick="document.getElementById('input1').value+='7'">7</button>
+    <button onclick="document.getElementById('input1').value+='8'">8</button>
+    <button onclick="document.getElementById('input1').value+='9'">9</button>
+    <button onclick="document.getElementById('input1').value+='0'">0</button>
+</div>
+
+   <div>
+    <input  type="text" name="" id="input2" >
+
+   
+
+    <button onclick="document.getElementById('input2').value+='1'">1</button>
+    <button onclick="document.getElementById('input2').value+='2'">2</button>
+    <button onclick="document.getElementById('input2').value+='3'">3</button>
+    <button onclick="document.getElementById('input2').value+='4'">4</button>
+    <button onclick="document.getElementById('input2').value+='5'">5</button>
+    <button onclick="document.getElementById('input2').value+='6'">6</button>
+    <button onclick="document.getElementById('input2').value+='7'">7</button>
+    <button onclick="document.getElementById('input2').value+='8'">8</button>
+    <button onclick="document.getElementById('input2').value+='9'">9</button>
+    <button onclick="document.getElementById('input2').value+='0'">0</button>
+</div>
+
+<div>
+    <input type="text" name="" id="input3">
+
+   
+
+   <button onclick="add()">Plus</button>
+   <button onclick="minus()">minus</button>
+   <button onclick="divide()"> Division</button>
+   <button onclick="percent()">Percentage</button>
+   <button onclick="multi()">Multiplication</button>
+
+
+
+   <button  onclick="set()">Reset</button>
+
+   <button onclick="delet()">Delete</button>
+    </div>
+
+
+
+    
+    
+
+</body>
+
+
+
+
+
+</html>
+<script>
+
+
+function add(){
+    let a= document.getElementById('input1').value;
+    let b= document.getElementById('input2').value;
+    // let c=(Number (a)+ Number(b))
+    let d= document.getElementById('input3').value=(Number (a)+ Number(b));
+   
+}
+
+function minus(){
+    let a= document.getElementById('input1').value;
+    let b= document.getElementById('input2').value;
+    // let c=(Number (a) - Number(b))
+    let d= document.getElementById('input3').value=(Number (a)- Number(b));
+   
+}
+
+
+function divide(){
+    let a= document.getElementById('input1').value;
+    let b= document.getElementById('input2').value;
+    // let c=(Number (a)/ Number(b))
+    let d= document.getElementById('input3').value=(Number (a)/ Number(b));
+   
+}
+
+function percent(){
+    let a= document.getElementById('input1').value;
+    let b= document.getElementById('input2').value;
+    // let c=(Number (a) % Number(b))
+    let d= document.getElementById('input3').value=(Number (a)% Number(b));
+   
+}
+
+function multi(){
+    let a= document.getElementById('input1').value;
+    let b= document.getElementById('input2').value;
+    // let c=(Number (a) * Number(b))
+    let d= document.getElementById('input3').value=(Number (a)*Number(b));
+   
+}
+
+function set(){  
+   document.getElementById("input3").value=0; 
+   document.getElementById("input2").value=0; 
+
+   document.getElementById("input1").value=0; 
+}
+ function delet(){
+    document.getElementById('input3').substr.value;
+ }
+
+
+
+  
+
+
+    // let x=prompt("enter a number please")
+    //  let y=prompt("enter a  second number please")
+    
+    //  console.log(Number(x)+ Number(y))
+    
+    
+    
+    
+    
+    document.getElementById
+    
+    
+    // document.getElementById('heading').style.color="blue;"
+    // document.getElementById('heading').innerHTML="<del> late coming is bad</del>"
+    // document.getElementById('heading').innerHTML +="<mark> just be patient<mark>"
+
+
+
+
+
+        function showPassword(){
+            document.getElementById('input').type="text";
+            document.getElementById('eye').hidden=true;
+            document.getElementById('eyeslash').hidden=false;
+            
+
+        }
+
+        function hidePassword(){
+            document.getElementById('input').type="password";
+            document.getElementById('eye').hidden=false;
+            document.getElementById('eyeslash').hidden=true;
+        }
+
+
+
+
+  
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

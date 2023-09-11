@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../JAVASCRIPT/icofont/icofont.min.css">
+    <link rel="stylesheet" href="../JAVASCRIPT/bootstrap-5.2.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+         div{
+            width: 350px;
+            height: 100%;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 30px;
+            
+        }
+        #main{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <main class="data-container" id="main">
+        
+    </main>
+    
+    <button onclick="dataRetriever()"> something</button>
+</body>
+<script>
+    // function dataRetriever(){
+        
+        const mainBox = document.getElementById('main')
+        mainBox.innerHTML=""
+        const k = localStorage.getItem('product')
+        const productArray = JSON.parse(k)
+        for (let i =0; i<= productArray.length; i++){
+            const productbox = document.createElement('div')
+            const photo = document.createElement('img')
+        const pname = productArray[i].name
+        const pcat = productArray[i].catergory
+        const pdes = productArray[i].description
+        const ppri = productArray[i].price
+        const prat = productArray[i].rating
+        const pimg = productArray[i].imageUrl
+        // console.log(productArray[4].imageUrl)
+
+        productbox.innerHTML +=`
+        <h3>${pname}</h3>
+        <img src="${pimg}" width=100px height=100px> 
+        <h2> ${ppri}</h2>
+
+        
+
+        `
+        mainBox.appendChild(productbox)
+
+        }
+        
+        
+        main.appendChild(photo)
+
+    // }
+</script>
+</html>

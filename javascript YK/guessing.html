@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+<style>
+    h1{
+        color: goldenrod;
+    }
+    button{
+        border-radius: 5px;
+        background-color: teal;
+        border: none;
+        height: fit-content;
+        width: fit-content;
+        font-size: 30px;
+        color: black;
+    }
+
+    /* h3{
+       color: red;
+    }
+
+    h2{
+        color: green;
+    } */
+
+    #dis{
+        color: black;
+        font-size: 50px;
+        
+    }
+
+
+    #guessipts{
+        width: 200px;
+        height: 30px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Guessing Game</h1>
+    <input id="guessipts" type="text" name="">
+
+    
+
+
+    <button  id="guessbtn" onclick="Guess()">Guess Number</button>
+    <h1 hidden style="color: red;" id="Wrong">You are Wrong😭..Try Again Later MotherFucker</h1>
+
+    <h1 hidden style="color: green;" id="Correct">You are correct😃</h1>
+
+
+ <h1  id="dis"></h1>
+    
+
+</body>
+</html>
+<script>
+
+
+    
+  
+    function Guess(){
+        let a=document.getElementById('guessipts').value;
+
+        b=Number(Math.random()*10).toFixed(0)
+        
+        a=document.getElementById('guessipts').value;
+
+        
+       if(a==b){
+        document.getElementById('Correct').hidden=false;
+        document.getElementById('Wrong').hidden=true;
+        
+        
+
+       } 
+       
+       
+       else if( a != b){
+        document.getElementById('Correct').hidden=true;
+        document.getElementById('Wrong').hidden=false;
+       }
+
+ document.getElementById('dis').innerHTML=b;
+       
+  
+       
+
+         
+       
+    }
+
+</script>

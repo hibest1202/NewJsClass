@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB sign up</title>
+    <style>
+        body{
+            margin: 0px;
+            background-color: rgb(235, 243, 250);
+            padding: 130px;
+        }
+        img{
+            width: 45%;
+        }
+        .divfacebook{
+            width: 500px;
+            margin: 0px;
+            font-size: 25px;
+        }
+        p{
+            margin: 0px;
+            margin-left: 16px;
+            font-size: 30px;
+        }
+        main{
+            display: flex;
+            justify-content: space-around;
+        }
+        .formdiv{
+            width: 350px;
+            height: 300px;
+            border-radius: 5px;
+        }
+        form{
+            background-color: white;
+            padding: 25px;
+            box-shadow: 0px 0px 20px rgb(172, 170, 170);
+            width: 350px;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        input{
+            width: 300px;
+            padding: 12px;
+            margin: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            border: 1px solid whitesmoke;
+        }
+        input:focus{
+            outline: blue;
+            border: 1px solid whitesmoke;
+         }
+         .btn{
+             background-color: rgb(84, 128, 209);
+             width: 320px;
+             color: white;
+             border: none;
+             font-size: 18px;
+             padding: 10px;
+             margin: 10px;
+         }
+         .btn2{
+             width: 250px;
+             border-radius: 10px;
+             color: white;
+             background-color: rgb(16, 179, 16);
+             padding: 12px;
+             font-size: 17px;
+             border: none;
+             margin: 10px;
+         }
+         .linkdiv{
+             margin: 10px;
+             font-size: 17px;
+         }
+         .divtext{
+             text-align: center;
+             margin: 15px;
+         }
+         a{
+             color: blue;
+             text-decoration: none;
+             padding: 10px;
+             margin-top:10px;
+         }
+         a:hover{
+             text-decoration: underline;
+         }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="divfacebook"> 
+            <img class="fb_logo _8ilh img" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="formdiv">
+            <form action="">
+            <div>
+                <input autofocus placeholder="Email Address or Phone Number" type="email">
+                <input  placeholder="Enter Password" type="password">
+                <button class="btn">Log In </button>
+                <div class="linkdiv"></div>
+                <span><a href="fb.com">Forgotten Password</a></span>
+            </div>
+            <hr>
+            <button class="btn2">Create New Account </button>
+        </form>
+        <div class="divtext"> 
+            <strong>Create a Page</strong><span>for a celebrity, brand or business</span>
+        </div>
+        </div>
+    </main>
+</body>
+</html>

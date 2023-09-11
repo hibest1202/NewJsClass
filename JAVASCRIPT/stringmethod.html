@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="tester()">Click me</button>
+    <div id="show"></div>
+</body>
+<script>
+let test1 = prompt("Enter String of your Choice");
+
+function tester(){
+    let show = document.getElementById("show");
+let test2 = test1.toUpperCase();
+let wordLength = test1.length;
+let test3 = test1.toLowerCase();
+let test4 = test1.indexOf("a");
+let testSearch ="JAVASCRIPT";
+let test5= test1.search(testSearch);
+test1=test1.value;
+    show.style.display="block";
+    show.innerHTML=`<p>The length of the string is ${wordLength}<p><p>The string in uppercase is ${test2}<p><p>The string in lowercase is ${test3}<p><p>The index of "A" in the string is ${test4}<p>`
+
+if (test5 == -1){
+    show.innerHTML+=`<p>The string does not contain ${testSearch}</p>`
+    }
+    else{
+        show.innerHTML+=`<p>The string  contains ${testSearch}</p>`
+    }
+} 
+
+</script>
+</html>

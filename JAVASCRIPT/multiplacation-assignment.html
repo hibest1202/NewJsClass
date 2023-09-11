@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            display: block;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="inp1">
+    <input type="number"  id="inp2">
+    <button onclick="calc()">Clik me</button>
+    <div id="show" class="table"> </div>
+</body>
+</html>
+<script>
+    let inp1 = document.getElementById("inp1");
+    let inp2 = document.getElementById("inp2");
+    let x = inp1.value
+    
+    function calc(){
+
+    for(let i = 1; i <=inp2.value; i++ ){
+        
+        let f = document.getElementById('show');
+        let multi =document.createElement('div');
+        let y = inp1.value * i;
+            let answer =`<p> ${inp1.value} x ${i} = ${y} </p>`
+            console.log(answer)
+           
+            
+            f.innerHTML+=answer;
+           
+        
+        
+    }
+}
+</script>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../google search/icofont/icofont.min.css">
+    <title>Google search</title>
+    <style>
+        body{
+            background-image: url(1bg.jpeg);
+            background-repeat: no-repeat;
+            border: 0;
+        }
+        .navbar{
+            display: flex;
+            text-align: right;
+            width: 100%;
+            text-align: right;
+
+        }
+        .spannav{
+            color: white;
+           text-align: right;
+           
+
+        }
+        .spannav:hover{
+            text-decoration: underline;
+        }
+        .icon-container{
+            width: 24px;
+            height: 24px;
+            border-radius: 10px;
+            margin-top: 12px;
+            margin-left: 10px;
+        }
+        .icon-container2{
+            width: 32px;
+            height: 32px;
+            border-radius: 20px;
+            margin-top: 7px;
+            margin-left: 10px;
+            background-color: blueviolet;
+            text-align: center;
+            color: white;
+            font-size: 10px;
+        }
+        .divlogo{
+            width: 300px;
+            height: 100px;
+            margin-top: 112px;
+            margin-bottom:50px;
+           
+        }
+      
+        .formsearch{
+            width: 582px;
+            height: 44px;
+            border: none;  
+            font-size: large;
+        }
+        .formsearch:focus{
+            border: none;
+            outline: none;
+        }
+
+        .input-container{
+            border-radius: 20px;
+            background-color: white;
+            border: 1px solid #303134;
+            width: fit-content;
+        }
+        .input-container:focus-within .related-search{
+            display: block;
+            border: none;
+            text-align: left;
+
+        }
+        .input-container i{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .related-search{
+            width: 600px;
+            height: 350px;
+            background-color: white;
+            border-radius: 15px;
+            display: none;
+        }
+        .holder{
+            width: fit-content;
+            height: fit-content;
+            position: fixed;
+            top: 400px;
+            left: 380px;
+            z-index: -1;
+            
+        }
+        .bookmark-container{
+            width: 700px;
+            height: 100px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            display: flex;
+            
+            
+
+        }
+        .bookmarks{
+            width: 100px;
+            height: 100px;
+            border: 10px;
+            margin-left: 50px;
+            position: relative;
+            text-align: center;
+            display: block;
+            border-radius: 10px;
+        }
+        .bookmarks:hover{
+            background-color: rgba(78, 77, 77, 0.592);
+        }
+        .bookmarks:hover .vellip{
+            display: block;
+        }
+        .bookmark-img-holder{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            border-radius: 23px;
+            background-color: aliceblue;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .bookmark-img-holder img{
+            margin-top: 5px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .vellip{
+            position: absolute;
+            right: 5px;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: grey;
+            display: none;
+        }
+        span{
+            font-family: sans-serif;
+            font-size: smaller;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+ <div class="navbar">
+     <p class="spannav" style="margin-left: 1220px;"> Gmail</p>
+     <p class="spannav" style="margin-left: 5px;">  Images</p>
+ 
+     <div class="icon-container2"><P>K</P></div>
+ </div>
+ <center> 
+ <div class="divlogo"> <img src="googlelogo.png" alt="" width="272px" height="92px">  </div>
+ <div class="input-container"> 
+    <i class="icofont-search"></i>
+     <input type="text" class="formsearch" placeholder="Search Google or type a URL">
+     <i class="icofont-mic"></i>
+
+ <div class="related-search">
+     <p>Related Search</p>
+     <p>Related Search</p>
+     <p>Related Search</p>
+     <p>Related Search</p>
+     <p>Related Search</p>
+     <p>Related Search</p>
+     <p>Related Search</p>
+     <p>elated Search</p>
+     <p>Related Search</p>
+    </center>
+
+
+ </div>
+ <div class="holder">
+
+ 
+
+ <div class="bookmark-container">
+    <div class="bookmarks"> 
+        <div class="vellip"> &vellip; </div>
+        <div class="bookmark-img-holder"> <img src="twitter.png" alt=""></div>
+        <span>Twitter</span>
+     </div>
+     <div class="bookmarks"> 
+        <div class="vellip"> &vellip; </div>
+        <div class="bookmark-img-holder"> <img src="fb.png" alt=""></div>
+        <span>Facebook</span>
+     </div>
+     <div class="bookmarks"> 
+        <div class="vellip"> &vellip; </div>
+        <div class="bookmark-img-holder"> <img src="adsense-removebg-preview.png" alt=""></div>
+        <span>Adsense</span>
+     </div>
+     <div class="bookmarks"> 
+        <div class="vellip"> &vellip; </div>
+        <div class="bookmark-img-holder"> <img src="namcheap-removebg-preview.png" alt=""></div>
+        <span>Namecheap</span>
+     </div>
+</div>
+</div> 
+</div>
+    
+</body>
+</html>

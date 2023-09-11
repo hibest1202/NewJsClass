@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <style>
+        main{
+            text-align: center;
+           padding-left: auto;
+           padding-right: auto;
+           align-items: center;
+           margin: auto;
+           
+        }
+        input{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+   
+       
+    <main class="cen">
+        <H1> Welcome To Product Updating Center</H1>
+        <input type="text" placeholder="Enter Product Name" class="form-control w-50" id="pname">
+        <br>
+        <input type="text" placeholder="Enter Product Catergory" class="form-control w-50" id="pcat">
+        <br>
+        <input type="text" placeholder="Enter product Description" class="form-control w-50" id="pdes">
+        <br>
+        <input type="text" placeholder="Enter Product Image URL" class="form-control w-50" id="pimg">
+        <br>
+        <input type="text" placeholder="Enter Product Price" class="form-control w-50" id="ppri">
+        <br>
+        <input type="text" placeholder="Enter Product rating (scale 1-5)" class="form-control w-50" id="prat">
+        <br>
+        <button type="button" class="btn btn-success" onclick="sender()">SUBMIT</button>
+        <a href="product.html"> <button type="button" class="btn btn-success">View Product Page</button></a>
+        <h1 id="tester"></h1>
+    </main>
+
+
+</body>
+</html>
+
+<script>
+    // ;
+    // tester.innerText= localStorage.key(1)
+    const productContainer =[]
+    
+    function sender(){
+    
+    const pname= document.getElementById('pname')
+    const pcat= document.getElementById('pcat')
+    const pdes= document.getElementById('pdes')
+    const pimg= document.getElementById('pimg')
+    const ppri= document.getElementById('ppri')
+    const prat= document.getElementById('prat')
+    const tester = document.getElementById('tester')
+    let productDetails = {
+        name: pname.value,
+        Catergory: pcat.value,
+        description: pdes.value,
+        imageUrl: pimg.value,
+        price: ppri.value,
+        rating: prat.value
+    }
+        
+
+        productContainer.push(productDetails);
+        console.log(productContainer)
+        
+        localStorage.setItem("product", JSON.stringify(productContainer))
+    
+        pname.value=""
+        pcat.value=""
+        pdes.value=""
+        pimg.value=""
+        ppri.value=""
+        ppri.value=""
+        prat.value=""
+        tester.innerText= `${productContainer.length}  New Products Added`
+
+    }
+    
+    // let k = localStorage.getItem("product"+1, productContainer)
+    // let= JSON.parse(k)
+    
+</script>
+
+<!-- <script>
+    const k =[ {name: "hibest"}, {sex:"male"},{height: 175}]
+    function sender(){
+        localStorage.setItem("Details", JSON.stringify(k))
+    }
+    console.log(localStorage.value(0))
+</script> -->

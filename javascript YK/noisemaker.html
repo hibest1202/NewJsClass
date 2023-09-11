@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4{
+            font-size: 20px;
+            color: blue;
+
+        }
+    </style>
+</head>
+<body>
+    <input  type="text" name="" id="inputs">
+
+    <button onclick="Add()">Add</button>
+    <button onclick="Remove()">Remove</button>
+    <h4 id="names"></h4>
+    <h4 id="name"></h4>
+</body>
+</html>
+<script>  
+ let fourletters=document.getElementById('names');
+    fourletters=['Akin','Bayo','Sayo']
+ 
+ 
+ 
+     
+ let fiveletters=document.getElementById('name');
+ fiverletters=['saheed','moses','Ayomide']
+
+
+ 
+ 
+
+
+
+ 
+    
+
+   
+    function Add(){
+
+
+        let inputval=document.getElementById('inputs').value;
+
+        let inputcount=inputval.length;
+        let count="xxxx";
+        let counter= count.length;
+        
+     
+      
+      
+
+if(inputcount==counter){
+    show=document.getElementById('names').innerHTML=fourletters;
+       
+       hello=inputval;
+       dance=fourletters.push(hello);
+   
+//    dance=show;
+show=document.getElementById('names');
+console.log(show)
+
+  
+  
+
+
+}
+else if(inputcount!=counter){
+    shown=document.getElementById('name').innerHTML=fiverletters;
+    hi=inputval;
+    beast=fiverletters.push(hi);
+    // beast=shown;
+    shown=document.getElementById('name');
+
+
+    console.log(shown)
+    
+
+    
+
+ 
+    
+
+
+}
+
+
+
+        
+
+    
+
+
+    
+    }
+
+    // function Remove(){
+
+    // }
+
+
+    
+</script>

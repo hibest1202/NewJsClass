@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        span{
+            font-size: 40px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Minute(s)" id="min"> <br> <br>
+    <input type="text" placeholder="Enter Seconds" id="sec">
+    <br><br>
+    <span id="minshow"></span> <span>:</span> <span id="secshow"></span>
+    <br><br>
+    <button onclick="secStarter()">Pause</button>
+    <button onclick="starter()">Resume</button>
+    <button>Reset</button>
+
+</body>
+<script>  
+   function starter(){
+    
+ let minInput = document.getElementById('min').value
+ let secInput = document.getElementById('sec').value
+    const minDisplay = document.getElementById('minshow')
+    const secDisplay = document.getElementById('secshow')
+    minDisplay.innerHTML= Number(minInput);
+    secDisplay.innerHTML= Number(secInput);
+}
+
+function countDown(event, secInput){
+    // minInput = minInput - 1;
+    secInput--
+}
+
+function secStarter(){
+    setInterval(countDown, 1000);
+    console.log(secInput)
+    starter();
+
+}
+</script>
+</html>

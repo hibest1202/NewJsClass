@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="min">
+    <input type="text" name="" id="sec">
+    <button onclick="start()"> Countdown</button>
+    <div id="screen">00:00</div>
+    <script>
+        function start(){
+            // get the minute and seconds from inout
+            const min = document.getElementById('min')
+            const sec = document.getElementById('sec')
+            const screen = document.getElementById('screen')
+            // covert min and sec to number
+            let minute = Number(min.value)
+            let seconds = Number(sec.value)
+            let interval = null;
+
+            interval = setInterval(()=>{
+                seconds--
+                if ( seconds < 0){
+                    seconds = 59;
+                    minute--;
+                }
+              screen.innerHTML=` ${minute}:${seconds}`
+            
+
+            if (minute == 0 && seconds==0){
+                clearInterval(interval)
+                screen.innerHTML=`<p> 00:00</p>`
+
+            }
+
+        },1000)
+        }
+    </script>
+</body>
+</html>

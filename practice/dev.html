@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dev Html</title>
+    <style>
+      body{
+          background-color: #F5F5F5;
+          margin: 0;
+      }
+        .navdiv{
+            width: 100%;
+            height: 56px;
+            background-color: white;
+            border: 1px solid rgb(223, 222, 222);
+            outline: none;
+            display: flex;
+            justify-content: space-around;
+           
+
+        }
+        .logoimg{
+            width: 65px;
+            height: 50px;
+            
+        }
+        .inputnav{
+            width: 400px;
+            height: 30px;
+           padding: 5px;
+           
+          border-radius:5px;
+          font-size: 15px;
+          border: 1px solid grey;
+        }
+        .inputnav:focus{
+            border: 1px solid blue;
+        }
+        .button1{
+           
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            color: rgb(84, 71, 71);
+            border: none;
+            outline: none;
+            font-size: 20px;
+        }
+        .button1:hover{
+            color: blue;
+            background-color: rgb(200, 221, 240);
+            border-radius: 5px;
+            text-decoration: underline;
+        }
+        .button2{
+           
+            height: 35px;
+            background-color: white;
+            color: blue;
+            border: 1px solid blue;
+            outline: none;
+            font-size: 20px;
+            border-radius: 5px;
+           
+        }
+        .button2:hover{
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            text-decoration: underline;
+          
+        }
+        .bodydiv{
+            width:600px;
+            height: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid rgb(223, 222, 222);
+            border-top: none;
+
+        }
+        .p1{
+            font-size:30px; 
+            text-align:center; 
+            padding: 40px;
+            padding-bottom: 0px;
+            
+        }
+        .p2{
+            text-align: center;
+            font-size: 16px;
+            padding-top: 0px;
+        }
+        .btn1{
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            background-color:black ;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 50px;
+            margin-bottom: 5px;  
+            margin-top: 10px; 
+            border: none;
+  }
+  .btn1:hover{
+      background-color: #1B1B1B;
+  }
+         .btn2{
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            background-color:#0a3e4a ;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 50px;
+            margin-bottom: 5px;  
+            margin-top: 5px; 
+            border: none;
+  }
+
+  .btn2:hover{
+      background-color: #05303B;
+  }
+
+        .btn3{
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            background-color:#24292E ;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 50px;
+            margin-bottom: 5px;  
+            margin-top: 5px; 
+            border: none;
+  }
+  .btn3:hover{
+      background-color: #000000;
+  }
+
+        .btn4{
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            background-color:#1FA1F1 ;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 50px;
+            margin-bottom: 5px;  
+            margin-top: 5px; 
+            outline: none;
+            border: none;
+  }
+  .btn4:hover{
+      background-color: #0197F2;
+  }
+
+  .btn5{
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            background-color:#3B4ADF ;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 50px;
+            margin-bottom: 5px;  
+            margin-top: 5px; 
+            outline: none;
+            border: none;
+  }
+  .btn5:hover{
+      background-color: #2E3AB1;
+  }
+  .ipt{
+      width: 500px;
+      height: 30px;
+      margin-left: 50px;
+      border-radius: 5px;
+      border: 1px solid rgb(223, 222, 222);
+      margin-top: 10px;
+  }
+  .ipt:hover{
+      border: 1px solid blue;
+      outline: none;
+  }
+  span{
+      margin-left: 50px;
+      margin-top: 20px;
+  }
+  /* .box1{
+      margin-left: 50px;
+  } */
+  .devbox{
+      background-color: #ffffff;
+      margin-left: 50px;
+      width: 120px;
+      border: none;
+      
+
+  }
+  .devbox:hover{
+      background-color: #F5F5F5;
+      margin-left: 50px;
+      width: 120px;
+      border-radius: 5px;
+      border: none;
+     
+  }
+  
+    </style>
+</head>
+<main>
+<div class="navdiv">
+  <div style="display: flex;"> <img class="logoimg" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+  
+   <input class="inputnav" type="text" placeholder="Search..." autofocus></div>
+   <div><button class="button1">Log in</button>
+  <button class="button2">Create Account</button></div>
+</div>
+<div class="bodydiv">
+    <h1 class="p1">
+        Welcome to DEV Community
+    </h1>
+    <p class="p2">
+        <a href="##">DEV Community</a> is a community of 862,609 amazing developers
+
+
+    </p>
+    <button class="btn1"> <i class="fa fa-apple" style="font-size:20px; color:white; margin-right: 5px;"></i>Continue With Apple</button>
+    <button class="btn2"> <i class="fa fa-mask" style="font-size:20px; color:white; margin-right: 5px;"></i>Continue With Forem</button>
+    <button class="btn3"> <i class="fa fa-github" style="font-size:20px; color:white; margin-right: 5px;"></i>Continue With GitHub</button>
+    <button class="btn4"> <i class="fa fa-twitter" style="font-size:20px; color:white; margin-right: 5px;"></i>Continue With Twitter</button>
+    <P style="text-align:center; color:#404040;">Have a password? Continue with your email address</P>
+    <span> Email</span>
+    <input type="text" class="ipt"> <br><br>
+    <span> Password</span>
+    <input type="password" class="ipt"> <br> <br>
+   <div class="devbox"> <input  type="checkbox">
+  <label > Remember me</label><br></div><br>
+  <button class="btn5"> Continue </button>
+   <br>
+  <center> <h4 style="color:blue;"> I forgot my password</h4></center>
+</div>
+</main>
+<body>
+    
+</body>
+</html>

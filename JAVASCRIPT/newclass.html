@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ /* #div1{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+} */
+</style>
+   
+</head>
+<body>
+    <div id="show"></div>
+   <div style="display: flex;">
+    <button id="incre" onclick="adder()">+</button>
+<span id="div1"></span>
+<button id="decre" onclick="subber()">-</button>
+</div>
+</body>
+</html>
+<script>
+//     // Prompt the user for input
+// var userInput = prompt("Enter a number:");
+
+// // Convert the input to a number
+// var number = parseInt(userInput);
+
+// // Check if the number is valid
+// if (isNaN(number)) {
+//   alert("Invalid input. Please enter a valid number.");
+// } else {
+//   // Check if the number is even or odd
+//   if (number % 2 === 0) {
+//     alert(number + " is an even number.");
+//   } else {
+//     alert(number + " is an odd number.");
+//   }
+// }
+
+
+// IF esle if conditional statement 
+// let p1= document.getElementById("p1")
+// let age = prompt("enter Number");
+// let testAge = Number(age);
+// if (testAge < 13){
+//     p1.innerText="C'mon , You are just a child";
+// }
+// else if(testAge < 18){
+//    p1.innerText ="Remain small , you go soon begin to Vote";
+// }
+// else{
+//    p1.innerText="Tuale! Oya you can vote now"
+// }
+
+// Switch- Break Statement
+// let day = prompt("Ennter a Number from 0-6");
+// let testDay = Number(day);
+// switch (testDay){
+//     case 0: 
+//     alert("The day is Sunday")
+//     break;
+
+//     case 1: 
+//     alert("The day is Monday")
+//     break;
+
+//     case 2: 
+//     alert("The day is Tuesday")
+//     break;
+
+//     case 3: 
+//     alert("The day is Wednesday")
+//     break;
+
+//     case 4: 
+//     alert("The day is Thursday")
+//     break;
+
+//     case 5: 
+//     alert("The day is friday")
+//     break;
+
+//     case 6: 
+//     alert("The day is Saturday")
+//     break;
+
+//     default:
+//         alert("Invalid Input from the user")
+//     break;
+// }
+
+
+// Functions in Javascript
+// Parametized function
+
+// function addNum(num1, num2){
+//     let add = num1 + num2;
+//     let sub = num1 - num2;
+//     let divv = num1/num2;
+//     let mult = num1*num2;
+//     let mod = num1 % num2;
+//     return [add, sub, divv, mult, mod]
+// }
+// let test = addNum(23, 12);
+// console.log(test);
+
+// Event Listener 
+// let input1 = document.getElementById("input1");
+// let div1 = document.getElementById("div1");
+// function changeColor(){
+//     div1.style.backgroundColor = input1.value;
+//     if (input1.value <= 40){
+//         div1.innerText=`The student score:${input1.value}, is graded:Failed`
+//     } 
+//     else if (input1.value <= 50){
+//         div1.innerText=`The student score:${input1.value}, is graded:Credit`
+//     }
+//     else if (input1.value <= 69 ){
+//         div1.innerText=`The student score:${input1.value}, is graded:Good`
+//     }
+//     else if (input1.value >= 70){
+//         div1.innerText=`The student score:${input1.value}, is graded:Distinction`
+//     }
+//     else{
+//         div1.innerText=`Enter Valid Student score`
+//     }
+   
+// }
+
+
+// let num = 0;
+// let div1=document.getElementById("div1");
+// div1.innerHTML= num;
+
+// function adder(){
+// if (num <= 9 && num >= 0){
+
+//     num = num +1;
+//     div1.innerHTML=num;
+// }
+
+// else{
+//     alert("Maximum NUmber reached");
+// }
+// }
+
+
+// function subber(){
+//     if(num > 0 ){
+//     num =num - 1;
+//     div1.innerHTML=num;
+// }
+// else{
+//     alert("Minimum Number Reached"); 
+// }
+// }
+let num =Math.floor(Math.random()*10)
+function dice(){
+document.getElementById("show").innerText= num
+}
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="showNames()"> show names</button>
+    <button onclick="addNames()"> add names</button>
+
+    <div style="font-size: 22px;" id="screen"> </div>
+    <script>
+        const db = ["Ayomide", "Charles", "tolulope", "Idris", "ajani"];
+        const input = document.getElementById('input');
+        const dscreen = document.getElementById('screen');
+
+        function showNames(){
+            dscreen.innerHTML=""
+            db.forEach(function(item, index){
+                dscreen.innerHTML += `<h1> ${index} - ${item} </h1>`;
+            })
+        }
+        function addNames(){
+            db.push(input.value)
+            input.value = ""
+            console.log(db);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.menus{
+    display: flex;
+    }
+.menus span{
+padding: 10px;
+}

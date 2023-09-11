@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 200px;
+            height: 300px;
+            border-radius: 8px;
+            box-shadow: 8px 6px 8px 2px rgb(0, 0, 0, 0.2);
+            
+        }
+    </style>
+</head>
+<body> <div style="display: flex;">
+    <button onclick="previous()">previous</button><span id="sn"> </span><button onclick="next()">Next</button>
+</div>
+
+<div class="card" id="card"></div>
+<button onclick="hs()">card</button>
+</body>
+
+<script>
+    // let num = 0;
+    // let arr1 =[ "me", "you", "Him", "She", "They", "Them"];
+    
+    // let sn= document.getElementById("sn")
+    // sn.innerHTML=`${arr1[num]}`;
+
+    // function next(){
+    //     if (num < 5){
+    //         num++;
+    //         sn.innerHTML=`${arr1[num]}`;
+        
+    //     console.log(num)
+    // } 
+    // else{
+    //     num = 0
+    //     sn.innerHTML=`${arr1[num]}`
+    // }
+    // }
+
+    // function previous(){
+    //     if (num > 0){
+    //         num--;
+    //         sn.innerHTML=`${arr1[num]}`;
+            
+    //         console.log(num)  
+        
+        
+    // } 
+    // else{
+    //     num = arr1.length - 1;
+    //     sn.innerHTML=`${arr1[num]}`
+    // }
+    // }
+    let divbox =  document.getElementById("card");
+    divbox.style.display="none"
+    function hs(){
+       
+     
+        if(divbox.style.display=="none"){
+            divbox.style.display=="block"
+        }
+        else{
+            divbox.style.display=="none"
+        }
+    }
+
+</script>
+</html>

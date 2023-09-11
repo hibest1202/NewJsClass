@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enter Number</h2>
+    <input type="text" id="inp"> <button onclick="checker()">check</button>
+    <span id="answer"></span>
+    <button onclick="interClear()">Clear Interval</button>
+    
+</body>
+<script>
+    let num = Math.floor(Math.random()*10)
+    let inp = document.getElementById("inp")
+    let answer= document.getElementById("answer")
+    console.log(num)
+    // function checker(){
+    //     if (inp.value == num){
+    //         answer.innerText="Correct"
+    //         answer.style.color="green"
+    //     }
+    //     else{
+    //         answer.innerText="wrong"
+    //         answer.style.color="red"
+    //     }
+    //     console.log(num)
+    // }
+
+   
+    function checker(){
+    let thelog =setInterval(()=>{
+       answer.innerText=inp.value;
+       inp.value--
+    },1000)
+
+    setTimeout(()=>{
+        clearInterval(thelog)
+    }, inp.value)
+
+   
+        // clearInterval(thelog)
+    }
+</script>
+</html>

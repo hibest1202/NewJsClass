@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{9ACE336B-321A-4D8B-8A1B-6AD649FAEE7D}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="practice/EmptyHtmlFile.html">
+    <Files>
+      <File FileName="practice/Program.cs" Line="1" Column="1" />
+      <File FileName="practice/EmptyHtmlFile.html" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="practice" expanded="True">
+            <Node name="practice" expanded="True">
+              <Node name="EmptyHtmlFile.html" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.practice PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

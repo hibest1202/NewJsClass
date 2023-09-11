@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .first{
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            background-color: red;
+            border: 3px solid black;
+        }
+        .second{
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            /* background-color: red; */
+            border: 3px solid black;
+        }
+
+        .third{
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            /* background-color: red; */
+            border: 3px solid black;
+        }
+
+        .changers{
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            background-color:blue;
+            border: 3px solid black;
+            margin: 10px auto;
+        }
+
+        .light-area{
+            height: 400px;
+            width: 120px;
+            border-radius: 30px;
+            margin: 20px auto;
+            border: 1px solid grey;
+        }
+
+  
+    </style>
+</head>
+<body>
+<div class="light-area">
+   <div id="first-light" class="first"></div>
+   <div id="second-light" class="second"></div>
+   <div id="third-light" class="third"></div>
+</div>
+   <button onclick="ChangerHere()" id="changer" class="changers">Change here</button>
+
+
+
+
+
+    
+</body>
+</html>
+<script>
+
+    var A=document.getElementById('first-light');
+    var B=document.getElementById('second-light');
+    var C=document.getElementById('third-light');
+
+     let D='red';
+   
+
+    function ChangerHere(){
+        if (D== 'red'){
+            A.style.backgroundColor='white';
+            B.style.backgroundColor='gold';
+            C.style.backgroundColor='white';
+            D='gold';
+           
+
+        }
+        else if(D== 'green'){
+            A.style.backgroundColor='white';
+            B.style.backgroundColor='white';
+            C.style.backgroundColor='green';
+            D='green';
+            
+          
+
+        } 
+        else if (D=='green'){
+            A.style.backgroundColor='red';
+            B.style.backgroundColor='white';
+            C.style.backgroundColor='white';
+            D='red';
+        }
+         
+
+
+        
+
+
+
+    }
+
+
+
+
+</script>

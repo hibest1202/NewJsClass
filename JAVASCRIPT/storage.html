@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <p>Name</p>
+    <input type="text" name="" id="">
+
+
+    <p>DOB</p>
+    <input type="text" name="" id="">
+
+
+    <p>Account Type</p>
+    <input type="text" name="" id="">
+
+
+    <p>Balance</p>
+    <input type="text" name="" id="">
+
+
+    <p>BVN</p>
+    <input type="text" name="" id=""> -->
+
+    <button onclick="saveData()">save name</button>
+    <button onclick="retrieveData()">get name</button>
+</body>
+</html>
+<script>
+    function saveData(){
+        let names = ["kiki", "iky", "grace"]
+        let nameList = {"name": "Ayomide", score:67}
+        localStorage.setItem("surname", JSON.stringify(nameList));
+        
+        console.log(names)
+    }
+
+    function retrieveData(){
+        let item = localStorage.getItem('surname')
+        let convertBackToArray = JSON.parse(item)
+        console.log(convertBackToArray)
+    }
+</script>

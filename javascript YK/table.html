@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+        .header{
+            width: 100%;
+            background-color: green;
+            height: fit-content;
+    
+}
+
+.calculations{
+    color: yellow;
+    font-size: 20px;
+}
+
+input{
+    width: 50%;
+}
+
+.table-section{
+    /* background-color: blue; */
+    width: fit-content;
+    height: fit-content;
+    /* background-size: cover; */
+    display: flex;
+    /* justify-content: space-between; */
+   
+}
+
+#tables{
+    background-color: yellow;
+}
+
+p{
+    white-space: nowrap;
+    margin-left: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="calculations">Calculation Tables</div>
+
+        <div> <input type="text" name="" id="input1">
+            <input type="text" name="" id="input2">
+        </div>
+        <button onclick="Show()">Show Tables</button>
+        <select name="" id="sel">
+            <option  value="">---select operation---</option>
+            <option id="Multi" value="Multiplication">Multiplication</option>
+            <option id="subs" value="Subtraction">Subtraction</option>
+            <option id="divide" value="Division">Division</option>
+            <option id="add" value="Addition">Addition</option>
+        </select>
+        
+
+    </div>
+
+
+    <div id="showless" class="table-section">
+
+        <div id="showus"></div>
+       
+
+
+    </div>
+</body>
+</html>
+
+<script>
+
+
+
+
+
+ function Show(){
+    let showcol=document.getElementById('input1');
+    let showrow=document.getElementById('input2');
+
+    let showb=document.getElementById('showless');
+
+
+
+// let operator='';
+
+ operator=document.getElementById('sel');
+
+//  let revise=operator.value;
+ 
+ 
+ 
+
+    
+
+
+
+
+
+    
+
+   for(let col=1; col<=showcol.value; col++){
+    
+    let createcol=document.createElement('div');
+    showb.appendChild(createcol);
+    
+    // stylings
+createcol.style.height='fit-content';
+createcol.style.width='140px';
+createcol.style.margin='1px';
+createcol.style.fontSize='30px';
+
+if(col % 2 == 0){
+    createcol.style.backgroundColor='pink';
+}
+else{
+    createcol.style.backgroundColor='gold';
+}
+
+
+if(operator.value=="Addition"){
+    let operator="+";
+
+   
+}
+else if(operator.value== 'Division'){
+    let operator='/';
+}
+else if(operator.value== 'Subtraction'){
+    let operator='-';
+}
+else if(operator.value== 'Multiplication'){
+    let operator='*';
+}
+
+
+
+
+
+   
+
+   
+  
+   
+for(let row=1; row<=showrow.value; row++){
+    
+ 
+ let result= eval(col+operator+row)
+    // let result=`${col} ${operator}   ${row}`;
+    console.log(result)
+  
+
+
+
+
+    
+
+  let shownow=  `<p> ${col} ${operator}  ${row}=${result}</p> <br>`
+
+
+
+
+
+ 
+
+createcol.innerHTML+=shownow;
+
+
+
+
+
+
+
+
+
+
+    
+
+
+   
+}
+
+
+  
+   }
+
+
+
+
+   
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

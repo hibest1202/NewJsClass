@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="uploader" onchange="upload(event)" >
+   <div id="myimage"></div>
+</body>
+</html>
+<script>
+     
+    function upload(event){
+        let myimage = document.getElementById('myimage')
+    let uploader = document.getElementById('uploader')
+    let show = URL.createObjectURL(event.target.files[0])
+    myimage.innerHTML=`<img src ="${show}" alt="noimageyet">`
+    }
+
+</script>

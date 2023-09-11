@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator Standard</title>
+</head>
+
+<style>
+    .calculate{
+        height: 600px;
+        width: 400px;
+        border: 5px solid black;
+        /* box-shadow: inset 2px 2px  2px 2px yellow; */
+        border-radius: 10px;
+        margin: 50px auto;
+        background-color: black;
+    }
+
+    .output{
+        width: 377px;
+        margin: 10px;
+        height: 100px;
+        border: none;
+        font-size: 50px;
+        color:white;
+        background-color: tomato;
+
+    }
+
+    .output:focus-within{
+        outline: none;
+        border: none;
+    }
+
+    .output2{
+        width: 377px;
+        margin: 10px;
+        height: 200px;
+        border: none;
+        font-size: 50px;
+        /* background-color: red; */
+
+    }
+
+
+    .output1{
+        width: 377px;
+        margin: 10px;
+        height: 200px;
+        border: none;
+        font-size: 50px;
+       
+        /* background-color: blue; */
+
+    }
+
+
+.buttons{
+    /* background-color: yellow; */
+    height: calc(100%-200px);
+    margin: auto;
+    width: fit-content;
+}
+.number-1{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: yellowgreen;
+}
+
+.number-e{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: white;
+}
+
+
+.number-2x{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+.number-3x{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-4x{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-5x{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+.number-6x{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 8px;
+   border: none;
+   background-color: aqua;
+}
+
+
+.number-3{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    font-size: 30px;
+   margin: 5px 10px;
+   border: none;
+   background-color: white;
+   
+
+}
+</style>
+<body>
+    <div class="calculate">
+
+
+
+
+        <input class="output" type="textarea" name="" id="output-center">
+       
+
+        
+
+
+        <div id="buttons" class="buttons">
+            <button onclick="Reset()" class="number-1">A/C</button>
+            <button onclick=""class="number-1">+/-</button>
+            <button onclick="Percentage()"class="number-1">%</button>
+            <button onclick="Divide()" class="number-1">/</button>
+            <button onclick="document.getElementById('output-center').value+='7'"class="number-1">7</button>
+            <button onclick="document.getElementById('output-center').value+='8'"class="number-1">8</button>
+            <button onclick="document.getElementById('output-center').value+='9'"class="number-1">9</button>
+            <button onclick="Multiplications()"class="number-1">X</button>
+            <button onclick="document.getElementById('output-center').value+='4'"class="number-1">4</button>
+            <button onclick="document.getElementById('output-center').value+='5'"class="number-1">5</button>
+            <button onclick="document.getElementById('output-center').value+='6'"class="number-1">6</button>
+            <button onclick="Minus()"class="number-1">-</button>
+            <button onclick="document.getElementById('output-center').value+='1'"class="number-1">1</button>
+            <button onclick="document.getElementById('output-center').value+='2'"class="number-1">2</button>
+            <button onclick="document.getElementById('output-center').value+='3'"class="number-1">3</button>
+            <button onclick="Plus()"class="number-1">+</button>
+            <button onclick="document.getElementById('output-center').value+='0'"class="number-3">0</button>
+            <button onclick="document.getElementById('output-center').value+=','"class="number-1">,</button>
+            <button onclick="Megv()" class="number-1">Del</button>
+            <button onclick="xquality()"class="number-e">=</button>
+
+
+
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   
+
+
+    function Megv(){
+        let textb=document.getElementById('output-center').value;
+       
+      dep= textb.slice(0, textb.length -1);
+        textb=dep;
+        dep=textb;
+     
+       document.getElementById('output-center').value=dep;
+    }
+
+function Reset(){
+    document.getElementById('output-center').value='';
+}
+
+
+
+    function Percentage(){
+        document.getElementById('output-center').value+='%';
+       
+        
+    }
+
+    function Divide(){
+        document.getElementById('output-center').value+='/';
+    }
+
+    function Minus(){
+        document.getElementById('output-center').value+='-';
+    }
+
+
+    function Plus(){
+        
+        document.getElementById('output-center').value+='+';
+    
+    }
+
+    function Multiplications(){
+        document.getElementById('output-center').value+='*';
+        
+    }
+   
+    function xquality(){
+        let a=document.getElementById('output-center');
+        // document.getElementById("output-center")
+      a=eval(a.value);
+
+       
+    //    d=document.getElementById('output-center').value=a;
+     c=document.getElementById('output-center').value=a;
+       
+       
+    }
+</script>

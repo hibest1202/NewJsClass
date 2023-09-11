@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+            width: 100px;
+            height: 50px;
+            border: none;
+            outline: none;
+        }
+        .red{
+            background-color: red;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div  class='red'></div>
+    <div  class="yellow"></div>
+    <div  class="green"></div>
+
+    <button onclick="SwitchIt()">Change Color</button>
+</body>
+<script>
+const halt = document.querySelector('.red');
+const wait = document.querySelector('.yellow');
+const go = document.querySelector('.green');
+let x = "red";
+
+function SwitchIt() {
+    if ( x == "red"){
+        halt.style.background='white';
+        wait.style.background='yellow';
+         x = "yellow";
+      
+    } 
+
+    else if (x == "yellow") {
+        halt.style.background='white';
+        wait.style.background='white';
+        go.style.background='green';
+         x = "green";
+       
+    } 
+    
+    else if (x == "green"){
+        halt.style.background='red';
+        wait.style.background='white';
+        go.style.background='white';
+
+        x = "red";
+
+    }
+
+}
+
+</script>
+</html>

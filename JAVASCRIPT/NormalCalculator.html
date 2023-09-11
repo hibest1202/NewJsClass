@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cal-container{
+        border-radius: 10px;
+        background-color: rgb(44, 44, 134);
+        width: 250px;
+        text-align: center;
+        margin: 200px auto  auto auto;
+    }
+    .btn-holder{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        color: blue;
+        background-color: white;
+        border-radius: 30px;
+        margin: 5px;
+        outline: none;
+        border: none;
+    }
+    input{
+        width: 90%;
+        border-radius: 10px;
+        height:50px;
+        margin: 5px;
+    }
+</style>
+<body>
+    <div class="cal-container">
+     <main>
+         <div>
+             <input type="text" id="screen"  >
+             <!-- <input type="text" style="display:none;"> -->
+         </div>
+        <div class="btn-holder">
+            <button onclick="document.querySelector('#screen').value +='1'">1</button>
+            <button onclick="document.querySelector('#screen').value +='2'">2</button>
+            <button onclick="document.querySelector('#screen').value +='3'">3</button>
+            <button onclick="div()">\</button>
+            <button onclick="document.querySelector('#screen').value +='4'">4</button>
+            <button onclick="document.querySelector('#screen').value +='5'">5</button>
+            <button onclick="document.querySelector('#screen').value +='6'">6</button>
+            <button onclick="plus()">x</button>
+            <button onclick="document.querySelector('#screen').value +='7'">7</button>
+            <button onclick="document.querySelector('#screen').value +='8'">8</button>
+            <button onclick="document.querySelector('#screen').value +='9'">9</button>
+            <button>-</button>
+            <button onclick="document.querySelector('#screen').value +='0'">0</button>
+            <button onclick="document.querySelector('#screen').value +='.'">.</button>
+            <button onclick="ddd()">=</button>
+            <button>+</button>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
+<script>
+    let sign = 0;
+    
+    function plus(){
+        const FirstData = Number(document.querySelector('#screen').value);
+        document.querySelector('#screen').value='';
+        sign = 1;
+        console.log(FirstData);
+
+    }
+
+    function ddd() {
+        let SecondData = document.querySelector('#screen').value;
+        if (sign == 1) {
+           let result= (Number(FirstData) + Number(SecondData));
+            document.querySelector('#screen').value = result;
+            console.log(result, FirstData, SecondData);
+        }
+        else if (sign == 2) {
+            result= (Number(FirstData) - Number(SecondData));
+            document.querySelector('#screen').value= result;
+        }
+        else if (sign == 3) {
+            result= (Number(FirstData) / Number(SecondData));
+            document.querySelector('#screen').value= result;
+        }
+        else if (sign == 4) {
+            result= (Number(FirstData) * Number(SecondData));
+            document.querySelector('#screen').value= result;
+        }
+
+    }
+</script>

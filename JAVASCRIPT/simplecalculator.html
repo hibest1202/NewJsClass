@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="form control d-flex">
+    <input type="text" id="box1" >
+    <button onclick="document.getElementById('box1').value+=0">0</button>
+    <button onclick="document.getElementById('box1').value+=1">1</button>
+    <button onclick="document.getElementById('box1').value+=2">2</button>
+    <button onclick="document.getElementById('box1').value+='3'">3</button>
+    <button onclick="document.getElementById('box1').value+='4'">4</button>
+    <button onclick="document.getElementById('box1').value+='5'">5</button>
+    <button onclick="document.getElementById('box1').value+='6'">6</button>
+    <button onclick="document.getElementById('box1').value+='7'">7</button>
+    <button onclick="document.getElementById('box1').value+='8'">8</button>
+    <button onclick="document.getElementById('box1').value+='9'">9</button>
+</div>
+    <br><br><br>
+    <div class="form control d-flex">
+        <input type="text" id="box11" >
+        <button onclick="document.getElementById('box11').value+=0">0</button>
+        <button onclick="document.getElementById('box11').value+=1">1</button>
+        <button onclick="document.getElementById('box11').value+=2">2</button>
+        <button onclick="document.getElementById('box11').value+='3'">3</button>
+        <button onclick="document.getElementById('box11').value+='4'">4</button>
+        <button onclick="document.getElementById('box11').value+='5'">5</button>
+        <button onclick="document.getElementById('box11').value+='6'">6</button>
+        <button onclick="document.getElementById('box11').value+='7'">7</button>
+        <button onclick="document.getElementById('box11').value+='8'">8</button>
+        <button onclick="document.getElementById('box11').value+='9'">9</button>
+    </div>
+    <br><br><br>
+    <div class="form control d-flex p-5">
+        <button onclick="ghg()">plus</button>
+        <button onclick="sub()">minus</button>
+        <button onclick="multi()">multi</button>
+        <button onclick="divi()">divi</button>
+    </div>
+
+    <br><br>
+ <div>
+    <input type="text" id="box123">
+ </div> 
+ <button onclick="rst()">Reset</button>
+</body>
+<script>
+    function ghg() {
+        let a = document.getElementById('box1').value;
+        let b = document.getElementById('box11').value;
+        let c = (Number(a) + Number(b));
+        document.getElementById('box123').value=c;
+        
+    }
+
+    function sub() {
+        let a = document.getElementById('box1').value;
+        let b = document.getElementById('box11').value;
+        let c = (Number(a) - Number(b));
+        document.getElementById('box123').value=c;
+      
+        
+    }
+
+    function multi() {
+        let a = document.getElementById('box1').value;
+        let b = document.getElementById('box11').value;
+        let c = (Number(a) * Number(b));
+        document.getElementById('box123').value=c;
+        
+    }
+
+    function divi() {
+        let a = document.getElementById('box1').value;
+        let b = document.getElementById('box11').value;
+        let c = (Number(a) / Number(b));
+        document.getElementById('box123').value=c;
+        
+    }
+    function rst(){
+        document.getElementById('box1').value='';
+        document.getElementById('box11').value='';
+        document.getElementById('box123').value='';
+    }
+    
+   
+
+</script>
+</html>

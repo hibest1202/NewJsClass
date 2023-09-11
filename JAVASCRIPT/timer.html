@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DATE: <span id="date"> </span></h1>
+    <h1>TIME: <span id="time"></span></h1>
+    <button onclick="stopTime()"> Stop Time</button>
+    <button onclick="resumeTime()"> Resume Time</button>
+    <script>
+        let timeout = null;
+        function showDAte(){
+            const dateInput = document.getElementById('date')
+            const timeInput = document.getElementById('time')
+            let date = new Date();
+            dateInput.innerHTML= date.toDateString()
+            timeInput.innerHTML = date.toLocaleTimeString()
+        }
+        timeout = setInterval(showDAte, 0)
+        
+        function resumeTime(){
+            timeout = setInterval(showDAte, 0)
+        }
+
+        function stopTime(){
+            timeout = clearInterval(timeout)
+        }
+    </script>
+</body>
+</html>

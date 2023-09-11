@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="show" class="table"> </div>
+</body>
+</html>
+<script>
+    for(let i = 1; i <=12; i++ ){
+        
+        let f = document.getElementById('show');
+        let multi =document.createElement('div');
+        for(let x=1; x <=12 ; x++){
+           
+            let y = i * x;
+            let answer =`<p> ${i} x ${x} = ${y}</p>`
+            console.log(answer)
+           
+            
+            multi.innerHTML+=answer;
+            f.appendChild(multi);
+           
+        
+        }
+    }
+</script>

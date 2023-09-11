@@ -1,0 +1,313 @@
+
+body{
+    margin: 0;
+}
+nav{
+
+    width: 100%;
+    height: 64px;
+    background-color: white;
+    display: flex;
+    border: 1px solid #E0E0E0;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+.logo-container{
+    display: flex;
+}
+.logo{
+    width: 127px;
+    height: 32px;
+    /* margin: 16px 24px; */
+    padding: 24px 24px;
+}
+.modall{
+    height: 100%;
+    width: fit-content;
+    margin-top: 13px;
+    
+}
+.modal{
+    width: 92px;
+    height: 37px;
+    color: white;
+    background-color: #0056d2;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto 8px auto 2px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+.logo-container input{
+    width: 314px;
+    height: 32px;
+    margin: auto 0px;
+}
+.logo-container .search-btn{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #0056d2;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto 0px;
+    text-align: center;
+    border-radius: 0px  5px  5px 0;
+    border: none;
+}
+.menu-container{
+    margin: auto 0;
+}
+.menu-container span{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: auto 8px;
+   
+}
+.menu-container button{
+    width: 135px;
+    height: 37px;
+    color: white;
+    background-color: #0056d2;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto 24px auto 2px;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    
+}
+.menu-container span:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.menu-container span.login{
+    color: blue;
+    
+}
+.modal-bg{
+    width: 100%;
+    height: fit-content;
+    background-color:rgba(22, 20, 20, 0.288);
+    position: absolute;
+    top: 66px;
+    left: 0;
+    display: none;
+}
+.modal-content{
+    width: 300px;
+    height: 700px;
+    background-color: #F5F5F5;
+    margin-left: 50px;
+    overflow-y: scroll;
+}
+.expolore-title{
+    font-weight: bold;
+    padding: 30px 20px 5px 20px;
+    font-size: 20px;
+
+}
+.explore-list-{
+    width: 100%;
+    /* height: 31px;  */
+    /* margin: 10px 20px;  */
+    /* display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: sans-serif;
+     */
+}
+
+.explore-list-spn{
+    width: 80%;
+    padding: 8px 20px; 
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    
+}
+.explore-list:hover{
+background-color: white;
+box-shadow: 0 0 5px grey;
+color: #548BD5;
+}
+.modal-drop1:hover .modal-container{
+display: block;
+}
+.browse-btn{
+    color:#0057D1;
+    background-color: white;
+    border: 1px solid #0057D1;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+    margin: 10px 0px 50px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.browse-btn:hover{
+color: white;
+background-color: #0057D1;
+}
+
+.modal-container{
+    width: 60%;
+    height: 100%;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    left: 350px;
+    border: 1px solid rgba(128, 128, 128, 0.443);
+    outline: none;
+    box-shadow: 0px 0px 0.2 grey;
+    overflow-y: scroll;
+    border:none;
+    display: none;
+}
+.modall:hover  .modal-bg{
+    display: block;
+}
+
+/* body section one starts here */
+
+.section1{
+    width: 98%;
+    height: 561px;
+    border: none;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sub-section1{
+    width: 570px;
+    height: auto;
+    margin: 50px 134px 24px 134px ;
+}
+.big-text{
+    padding-top: 30px;
+}
+.big-text span{
+    text-align: left;
+    font-size: 85px;
+    font-weight: bold;
+    color: #1F1F1F;
+}
+.small-text{
+    margin-top: 15px;
+}
+.small-text span{
+        font-size: 20px;
+        
+}
+.section1-btn-holder{
+    display: flex;
+    margin-top: 30px;
+
+}
+.section1-btn-holder .btn1{
+    width: 238px;
+    height: 72px;
+    color: white;
+    background-color: #0057D1;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 0;
+    
+
+}
+.section1-btn-holder .btn2{
+    width:328px;
+    height: 72px;
+    color: #0057D1;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 0;
+    border: 2px solid #0057D1;
+    margin-left: 10px;
+
+}
+.sub-section2{
+    width: 459px;
+    height: 497px;
+    margin: 0px 58px, 32px;
+    text-align: right;
+}
+.sub-section2 img{
+    width: 459px;
+    height: 497;
+}
+
+.section2{
+    width: 100%;
+    height: 299px;
+    background-color:#F5F5F5;
+}
+.span-container{
+  padding-top: 64px ;
+  padding-bottom: 48px;
+ text-align: center;
+ 
+}
+.span-container span{
+    font-size: 28px;
+    text-align: center;
+    
+}
+.span-container .redspan{
+color: blue;
+}
+.span-container:hover .redspan{
+    text-decoration: underline;
+}
+.img-container{
+    width: 80%;
+    height: 85px;
+    margin: auto;
+    /* background-color: red; */
+    /* display: flex;
+    justify-content: space-between; */
+}
+.img-control{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.illinois{
+    width: 156px;
+    height: 32px;
+}
+.duke{
+    width: 93px;
+    height: 32px;
+}
+.google{
+    width: 108px;
+    height: 37px;
+}
+.michgan{
+    width: 52px;
+    height: 55px;
+}
+.ibm{
+    width: 80px;
+    height: 32px;
+}
+.icl{
+    width: 134px;
+    height: 35px;
+}
+.stanford{
+    width: 125px;
+    height: 27;
+
+}
+.penn{
+    width: 112px;
+    height: 37px;
+}

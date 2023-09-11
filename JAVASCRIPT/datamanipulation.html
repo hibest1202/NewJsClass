@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pry{
+            display: flex;
+            /* justify-content: space-around; */
+            flex-wrap: wrap;
+            
+        }
+        div{
+            width: 350px;
+            height: 100%;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 30px;
+            margin-bottom: ;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar sticky-top bg-light d-flex">
+       
+          <button class="btn btn-outline-success me-2" type="button">men's clothing</button>
+          <button class="btn btn-outline-success me-2" type="button">jewelery</button>
+          <button class="btn btn-outline-success me-2" type="button">electronics</button>
+          <button class="btn btn-outline-success me-2" type="button">women's clothing</button>
+          
+        <main class="d-flex">
+        <input type="text" class="form-control w-75">
+        <button class="btn btn-success"> Search</button>
+    </main>
+    <a href="Mycartpage.html" target="_blank" rel="noopener noreferrer"><button class="btn btn-warning" type="button" id="cart">Item in Cart</button></a>
+      </nav>
+    <main id="pry"></main>
+
+</body>
+</html>
+
+
+<script>
+    const cartArray = []
+    const cart = document.getElementById('cart');
+
+    fetch("https://fakestoreapi.com/products")
+    .then((res)=> {
+        return res.json()
+    })
+    .then((data)=>{
+        const pry = document.getElementById('pry')
+
+    for (let i=0; i<= data.length; i++){
+
+        const pry = document.getElementById('pry')
+        const show = document.createElement('div')
+        show.style.border='1px solid green'
+        let photo = document.createElement('img')
+        let cater = document.createElement('p')
+        let title = data[i].title
+        let price = data[i].price
+        let des = data[i].description
+        let rating = data[i].rating.rate
+        let count = data[i].rating.count
+
+        photo = photo.src= data[i].image
+        cater = cater.innerHTML= data[i].category
+        show.innerHTML+=`<p><b>${title}</b></p><img src='${photo}' width= 100px> <h2>$${price}</h2><br> <p>Rating:${rating} by ${count} people</p><p>${des}</p>${cater} <br><button  onclick='addToCart(event, ${i})' class="btn btn-success">Add to Cart</button>`
+       console.log(data[i])
+        pry.appendChild(show);
+        
+       
+       
+    }
+    
+  
+    
+        
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
+
+
+    function addToCart(event, i) {
+        fetch("https://fakestoreapi.com/products")
+    .then((res)=> {
+        return res.json()
+    })
+    .then((data)=>{
+        cartArray.push(data[event, i])
+        cart.innerText=`${cartArray.length} Items in Cart`
+        localStorage.setItem("cart", JSON.stringify(cartArray))
+    })
+            
+}
+
+
+
+    
+</script>

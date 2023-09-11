@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container{
+            display: flex;
+            justify-content: space-around;
+           
+        }
+        .inp{
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="../JAVASCRIPT/icofont/icofont.min.css">
+    <link rel="stylesheet" href="../JAVASCRIPT/bootstrap-5.2.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="inp">
+         <input type="text" class="form-control" placeholder="Enter Task" id="task">  
+         <input type="text" class="form-control" placeholder="Enter Task Description" id="des">
+         <input type="text" class="form-control" placeholder="Time to Execute Task" id="tym">
+         <button class="btn btn-primary" id="send" onclick="sender()">Submit</button>
+        </div>
+
+        <div class="data-container">
+            <table class="table table-striped">
+                <tr>
+                    <th>S/N</th>
+                    <th>TASK</th>
+                    <th>DESCRIPTIONS</th>
+                    <th>TIME</th>
+                    <th>DATE</th>
+                    <th>ACTION</th>
+                </tr>
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+    </div>
+    <button onclick="del()">del</button>
+</body>
+<script>
+    const task = [];
+function sender(){
+    const taskName = document.getElementById('task')
+    const taskDesciption = document.getElementById('des')
+    const time = document.getElementById('tym')
+    const date = new Date()
+    let aaa = {
+        task: taskName.value,
+        descip: taskDesciption.value,
+        time: time.value,
+        date: date.toDateString()
+    }
+    task.push(aaa);
+    emptyall ()
+
+    uploader();
+   
+}
+function uploader(){
+    for (let index=0; index<task.length; index++){
+        let dataRetriever =task[index];
+        document.getElementById('content').innerHTML+=`
+        <tr>
+            <td>${index + 1}</td>
+            <td>${dataRetriever.task}</td>
+            <td>${dataRetriever.descip}</td>
+            <td>${dataRetriever.time}</td>
+            <td>${dataRetriever.date}</td>
+            <td> <i onclick='del(event, ${index})' class="icofont-ui-delete"></i></td>
+        </tr>`
+       
+
+        
+    }
+}
+function emptyall(){
+    document.getElementById('content').innerHTML=''
+}
+
+
+function del(event, index){
+    task.splice(index, 1);
+    
+    emptyall()
+    uploader()
+}
+</script>
+</html>

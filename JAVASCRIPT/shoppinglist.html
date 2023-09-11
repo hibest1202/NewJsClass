@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container{
+            display: flex;
+            justify-content: space-around;
+           
+        }
+        .inp{
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="../JAVASCRIPT/icofont/icofont.min.css">
+    <link rel="stylesheet" href="../JAVASCRIPT/bootstrap-5.2.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+</head>
+<body id="body">
+    <div class="main-container">
+        <div class="inp">
+         <input type="text" class="form-control" placeholder="Product Name" id="task">  
+         <input type="text" class="form-control" placeholder="Product Price" id="des">
+         <input type="text" class="form-control" placeholder="Product Qty" id="tym">
+         <button class="btn btn-primary" id="send" onclick="sender()">Submit</button>
+        </div>
+
+        <div class="data-container">
+            <table class="table" id="theader">
+                <tr>
+                    
+                    <th>PRODUCT</th>
+                    <th>PRICE</th>
+                    <th>QTY</th>
+                    <th>ACTION</th>
+                    <th>ACTION</th>
+                </tr>
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+    </div>
+    <button id="modeChanger" onclick="modeon()">Night Mode</button>
+</body>
+
+
+<script>
+    const task = [];
+function sender(){
+    const taskName = document.getElementById('task')
+    const taskDesciption = document.getElementById('des')
+    const time = document.getElementById('tym')
+    let body = document.getElementById("body")
+    let aaa = {
+        task: taskName.value,
+        descip: taskDesciption.value,
+        time: time.value,
+       
+    }
+    task.push(aaa);
+    emptyall ()
+
+    uploader();
+   
+}
+function uploader(){
+    for (let index=0; index<task.length; index++){
+        let dataRetriever =task[index];
+        document.getElementById('content').innerHTML+=`
+        <tr>
+            
+            <td>${dataRetriever.task}</td>
+            <td>${dataRetriever.descip}</td>
+            <td>${dataRetriever.time}</td>
+            <td> <i onclick='del(event, ${index})' class="icofont-pencil"></i></td>
+            <td> <i onclick='del(event, ${index})' class="icofont-ui-delete"></i></td>
+        </tr>`
+       
+
+        
+    }
+}
+function emptyall(){
+    document.getElementById('content').innerHTML=''
+}
+
+
+function del(event, index){
+    task.splice(index, 1);
+    
+    emptyall()
+    uploader()
+}
+
+function modeon(){
+    if (document.getElementById('modeChanger').innerText=="Night Mode"){
+    body.style.backgroundColor="black"
+    document.getElementById('content').style.color="white"
+    document.getElementById('theader').style.color="white"
+    document.getElementById('modeChanger').innerText="Day Mode"
+} else{
+    body.style.backgroundColor="white"
+    document.getElementById('content').style.color="black"
+    document.getElementById('theader').style.color="black"
+    document.getElementById('modeChanger').innerText="Night Mode"
+}
+}
+
+</script>
+</html>
